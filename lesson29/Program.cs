@@ -19,7 +19,11 @@ namespace lesson29
             {
                 Bet bet = null;
                 Console.WriteLine("Press 1: Number bet | Press 2: Odd bet | Press 3: Even bet | Press 4: Exit");
-                if (!int.TryParse(Console.ReadLine(), out int option)) continue;
+                if (!int.TryParse(Console.ReadLine(), out int option))
+                {
+                    Console.WriteLine("Invalid number! Choose between 1 and 4.");
+                    continue;
+                }
                 switch (option)
                 {
                     case 1:
